@@ -1,1 +1,26 @@
 // Mixins Here
+.display-flex(@direction: row, @justify: flex-start, @align: flex-start) {
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+    align-items: @align;
+  }
+
+  .hover-swap(@color, @bg-color) {
+    color: @color;
+    background-color: @bg-color;
+  
+    &:hover {
+      color: @bg-color;
+      background-color: @color;
+    }
+  }
+
+.btn-style(@width, @padding){
+    width:@width;
+    padding:@padding;
+    border-radius: 5px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
